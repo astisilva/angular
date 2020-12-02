@@ -18,6 +18,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     DetailsComponent,
     MoviePresentationComponent,
     CheckoutComponent,
+    AdminComponent,
     
   ],
   imports: [
