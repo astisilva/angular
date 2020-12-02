@@ -1,0 +1,45 @@
+<div class="container">
+  <h4>Added movie to cart: {{ addedMovies.name }}</h4>
+  <h4>antal filmer i cart: {{ CartService.numberInToComponent }}</h4>
+</div>
+
+<div class="themovieContainer">
+  <mat-card class="example-card" *ngFor="let movie of movies">
+    <mat-card-header>
+      <mat-card-title>{{ movie.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="movie.imageUrl" alt="movie image" />
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="toCartService(movie)">
+        Add movie
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

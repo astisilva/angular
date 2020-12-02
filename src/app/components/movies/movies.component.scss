@@ -1,0 +1,35 @@
+.container {
+  position: sticky;
+  z-index: 1;
+
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c4c8ec;
+}
+h4 {
+  padding-left: 20px;
+}
+
+.themovieContainer {
+  margin: auto;
+
+  background-color: #5866c8;
+  display: flex;
+
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.example-card {
+  max-width: 200px;
+}
+
+.mat-card {
+  margin: 10px;
+}
+
+.mat-card-title {
+  font-size: smaller;
+}
