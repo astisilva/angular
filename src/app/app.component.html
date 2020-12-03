@@ -1,16 +1,11 @@
 <nav>
   <p>
     <mat-toolbar color="primary">
-      <span>Webshop</span>
+      <span class="webshopLogo">Webshop</span>
 
       <ul>
         <li>
-          <a
-            routerLink="/movies"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >Movies</a
-          >
+          <a routerLink="/movies" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Movies</a>
         </li>
         <li><a routerLink="/orders" routerLinkActive="active">Cart</a></li>
         <li><a routerLink="/admin" routerLinkActive="active">Admin</a></li>

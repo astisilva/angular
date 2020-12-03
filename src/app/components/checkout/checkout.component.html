@@ -1,1 +1,13 @@
-<p>checkout works!</p>
+<div class="titleContainer">
+    <h1 class="title">Följande order har lagts</h1>
+</div>
+
+<ul *ngFor="let movie of cart">
+    <li> {{ movie.name }}</li>
+    <!-- <img style="height: 60%; width: 25%" [src]="movie.imageUrl" /> -->
+    <li>price: {{ movie.price }}</li>
+</ul>
+
+<a routerLink="/" routerLinkActive="active">
+    <button (click)="clearCart()">Yes det stämmer!!!</button>
+</a>

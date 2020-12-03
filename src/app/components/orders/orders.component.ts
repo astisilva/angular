@@ -11,7 +11,6 @@ import { IPostOrder } from './../../models/IPostOrder';
 })
 export class OrdersComponent implements OnInit {
   cart: IMovie[] = [];
- 
 
   order: IPostOrder = {
     companyId: 14062214,
@@ -37,8 +36,7 @@ export class OrdersComponent implements OnInit {
     this.CartService.sendNumber(this.CartService.cart.length);
   }
 
-
-  orderMovie() {
+  orderMovie(): void {
     console.log('orderMovie was pressed');
     this.order = {
       ...this.order,

@@ -1,47 +1,21 @@
 <div>
-<h4>Filmer i orders</h4>
+  <h4>Filmer i orders</h4>
 
-<ul *ngFor="let movie of CartService.cart"> <li> {{ movie.name }}</li>
-  <!-- <img style="height: 60%; width: 25%" [src]="movie.imageUrl" /> -->
-  <li>price: {{ movie.price }}</li>
-  <li>
-    <button mat-flat-button color="warn" (click)="deleteMovie(movie)">Remove movie</button>
-    
-  
-</ul>
-  <button mat-flat-button color="accent" (click)="orderMovie()">Order Movies -> To checkout</button>
+  <ul *ngFor="let movie of CartService.cart">
+    <li> {{ movie.name }}</li>
+    <!-- <img style="height: 60%; width: 25%" [src]="movie.imageUrl" /> -->
+    <li>price: {{ movie.price }}</li>
+    <li>
+      <button mat-flat-button color="warn" (click)="deleteMovie(movie)">Remove movie</button>
 
- 
+
+  </ul>
+  <a routerLink="/checkout" routerLinkActive="active">
+
+    <button mat-flat-button color="accent" (click)="orderMovie()">Order Movies -> To checkout</button>
+  </a>
+
+
+
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
