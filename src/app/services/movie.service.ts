@@ -13,7 +13,7 @@ export interface IMovieService {
   providedIn: 'root',
 })
 export class MovieService {
-  private orders = new Subject<IOrder[]>();
+   orders = new Subject<IOrder[]>();
   orders$ = this.orders.asObservable();
 
   movies = new Subject<IMovie[]>();
@@ -43,5 +43,16 @@ export class MovieService {
       this.httpOptions
     );
     response.subscribe();
+  }
+
+  getOrders() {
+    this.http
+      .get(
+        'https://medieinstitutet-wie-products.azurewebsites.net/api/orders?companyId=4004'
+      )
+      .subscribe((orders: IOrder[]) => {
+        this.orders.next(orders);
+        console.log(orders);
+      });
   }
 }

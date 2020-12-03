@@ -11,6 +11,7 @@ import { IPostOrder } from './../../models/IPostOrder';
 })
 export class OrdersComponent implements OnInit {
   cart: IMovie[] = [];
+ 
 
   order: IPostOrder = {
     companyId: 14062214,
@@ -36,18 +37,19 @@ export class OrdersComponent implements OnInit {
     this.CartService.sendNumber(this.CartService.cart.length);
   }
 
+
   orderMovie() {
     console.log('orderMovie was pressed');
     this.order = {
       ...this.order,
-      created: new Date().toDateString(),
+      created: new Date().toISOString(),
+      companyId: 4004,
       createdBy: 'me',
-      paymentMethod: 'cardname',
+      paymentMethod: 'MasterCard',
       orderRows: this.CartService.cart.map((movie, idx) => {
         return {
           productId: movie.id,
-          orderId: idx,
-          amount: movie.price,
+          amount: 1,
         };
       }),
     };

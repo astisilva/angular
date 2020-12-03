@@ -1,1 +1,8 @@
-<p>admin works!</p>
+<div *ngFor='let order of orders'>
+  
+  <p>CompanyId: {{order.companyId}}</p>
+  <p>Id: {{order.id}}</p>
+  <p>Order: {{order.created}}</p>
+<p>Payment method: {{order.paymentMethod}}</p>
+
+</div>
