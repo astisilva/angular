@@ -8,7 +8,10 @@
     <mat-card-header>
       <mat-card-title>{{ movie.name }}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image [src]="movie.imageUrl" alt="movie image" />
+
+    <a routerLink="/movies/{{movie.id}}" routerLinkActive="active">
+      <img mat-card-image [src]="movie.imageUrl" alt="movie image" />
+    </a>
 
     <mat-card-actions>
       <button mat-raised-button color="primary" (click)="toCartService(movie)">
@@ -17,29 +20,3 @@
     </mat-card-actions>
   </mat-card>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

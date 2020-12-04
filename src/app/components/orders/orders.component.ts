@@ -30,7 +30,7 @@ export class OrdersComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  deleteMovie(movie: IMovie) {
+  deleteMovie(movie: IMovie): void {
     const index = this.CartService.cart.indexOf(movie);
     this.CartService.cart.splice(index, 1);
     this.CartService.sendNumber(this.CartService.cart.length);
