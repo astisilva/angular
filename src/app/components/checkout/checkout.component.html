@@ -1,13 +1,15 @@
 <div class="titleContainer">
     <h1 class="title">Följande order har lagts</h1>
 </div>
-
-<ul *ngFor="let movie of cart">
-    <li> {{ movie.name }}</li>
-    <!-- <img style="height: 60%; width: 25%" [src]="movie.imageUrl" /> -->
-    <li>price: {{ movie.price }}</li>
-</ul>
-
+<mat-card color="primary" *ngFor="let movie of cart">
+    <mat-card-header>
+        <mat-card-title>{{ movie.name }}</mat-card-title>
+        <mat-card-subtitle>
+            price: {{ movie.price }}
+        </mat-card-subtitle>
+        <img mat-card-avatar [src]="movie.imageUrl" />
+    </mat-card-header>
+</mat-card>
 <a routerLink="/" routerLinkActive="active">
-    <button mat-raised-button color="primary"  (click)="clearCart()">Yes det stämmer!!!</button>
+    <button mat-raised-button color="primary" (click)="clearCart()">Yes det stämmer!!!</button>
 </a>
