@@ -1,0 +1,21 @@
+.container {
+  margin: auto;
+
+  background-color: #5866c8;
+  display: flex;
+
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.example-card {
+  max-width: 200px;
+}
+
+.mat-card {
+  margin: 10px;
+}
+
+.mat-card-title {
+  font-size: smaller;
+}
