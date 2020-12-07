@@ -10,7 +10,7 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class DetailsComponent implements OnInit {
   id: number;
-  movie: IMovie[];
+  movie: IMovie;
 
   constructor(
     private route: ActivatedRoute,
@@ -20,11 +20,10 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.id = params.id;
+      this.movieService.movie$.subscribe((movie) => {
+        this.movie = movie;
+      });
+      this.movieService.getMovie(this.id);
     });
-
-    this.movieService.movies$.subscribe((movie) => {
-      this.movie = movie;
-    });
-    this.movieService.getMovies();
   }
 }

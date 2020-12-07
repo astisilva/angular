@@ -1,19 +1,13 @@
 <div class='container'>
   <mat-card class="example-card">
-    <mat-card-header> 
-      
-      <mat-card-title>Id: {{movie[0].id}}, Film: {{movie[0].name}} </mat-card-title>
-      </mat-card-header>
-  
-  <img mat-card-image src="{{movie[0].imageUrl}}" alt="movieImage" />
-  
-    <p>Pris: {{movie[0].price}}Kr </p>
+    <mat-card-header>
+
+      <mat-card-title>Id: {{movie.id}}, Film: {{movie.name}} </mat-card-title>
+    </mat-card-header>
+
+    <img mat-card-image src="{{movie.imageUrl}}" alt="movieImage" />
+
+    <p>Pris: {{movie.price}}Kr </p>
   </mat-card>
-  
-  </div>
 
-
-<!-- <p>details about movie {{movie[0].id}} </p>
-<p>details about movie {{movie[0].name}} </p>
-<p>details about movie {{movie[0].price}} </p>
-<img src="{{movie[0].imageUrl}}" alt=""> -->
+</div>

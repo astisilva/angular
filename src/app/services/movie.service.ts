@@ -19,7 +19,7 @@ export class MovieService {
   movies = new Subject<IMovie[]>();
   movies$ = this.movies.asObservable();
 
-  movie = new Subject<IMovie[]>();
+  movie = new Subject<IMovie>();
   movie$ = this.movie.asObservable();
 
   constructor(private http: HttpClient) {}
@@ -40,8 +40,8 @@ export class MovieService {
       .get(
         `https://medieinstitutet-wie-products.azurewebsites.net/api/products/${id}`
       )
-      .subscribe((movie: IMovie[]) => {
-        this.movies.next(movie);
+      .subscribe((movie: IMovie) => {
+        this.movie.next(movie);
         console.log(movie);
       });
   }
