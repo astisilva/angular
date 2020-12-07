@@ -1,8 +1,7 @@
 <div *ngFor='let order of orders'>
-  
-  <p>CompanyId: {{order.companyId}}</p>
-  <p>Id: {{order.id}}</p>
-  <p>Order: {{order.created}}</p>
-<p>Payment method: {{order.paymentMethod}}</p>
-
-</div>
+  <mat-card class='container'>
+   <mat-card-subtitle>CompanyId: {{order.companyId}}</mat-card-subtitle>
+   <mat-card-title>Id: {{order.id}}</mat-card-title>
+   <mat-card-subtitle>Order: {{order.created}}</mat-card-subtitle>
+     <mat-card-subtitle>Payment method: {{order.paymentMethod}}</mat-card-subtitle>
+ </mat-card>
